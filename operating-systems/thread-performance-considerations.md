@@ -179,7 +179,7 @@ A more recent system call is `epoll`. This eliminates some of the problems that 
 
 The benefits of the event driven model mainly come from the design as a single address space with a single flow of control. As a result, the overheads are lower. There is a smaller memory footprint, and no need for context switching or synchronization.
 
-## Helper Threads And Processes
+## Helper Threads And Processes (Asynchronous I/O operations)
 When we talked about the many-to-one user level thread to kernel level thread model, we saw that a user level thread that blocks will block the entire process.  
 
 A similar problem can occur in the event driven model. If one of the handlers initiates a blocking call, the entire process can be blocked.
